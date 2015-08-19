@@ -14,6 +14,8 @@ stack* init_stack( ) {
 	s->curSize = 0;
 	
 	s->items = (int*) malloc(sizeof(int) * s->maxSize);	
+	if(s->items == NULL)
+		return 0;
 	memset(s->items, 0, sizeof(int) * s->maxSize);
 
 	return s;

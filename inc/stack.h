@@ -9,8 +9,6 @@
 #define STACK_EMPTY	2
 
 
-typedef struct __data data;
-
 struct __stack {
 	int	*items;
 	uint32_t maxSize;
