@@ -4,7 +4,7 @@ VPATH = src inc
 CFLAGS = -I inc
 
 
-algorithm: main.o stack.o queue.o
+algorithm: main.o stack.o queue.o list.o
 	gcc $^ -o $@
 
 main.o: main.c
@@ -14,6 +14,9 @@ stack.o: stack.c
 	gcc -c $<
 
 queue.o: queue.c
+	gcc -c $<
+
+list.o: list.c
 	gcc -c $<
 
 .PHONY: all
